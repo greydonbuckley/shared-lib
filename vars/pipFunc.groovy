@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def pipFunc(Closure body) {
+def call(Closure body) {
     node {
         try {
             body()
