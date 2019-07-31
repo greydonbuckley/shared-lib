@@ -1,0 +1,27 @@
+@Library('shared-lib')_
+pipFunc() {
+
+	stage('Print Build Info') {
+	    snDevOpsStep '60407d439f723300a1af5bb0657fcf6b'
+		printBuildinfo {
+			name = "Sample Name"
+		}
+	}
+	stage('Disable balancer') {
+	    snDevOpsStep '64407d439f723300a1af5bb0657fcf6b'
+		disableBalancerUtils()
+	}
+	stage('Deploy') {
+	    snDevOpsStep 'a8407d439f723300a1af5bb0657fcf6a'
+		deploy()
+	}
+	stage('Enable balancer') {
+	    snDevOpsStep 'e0407d439f723300a1af5bb0657fcf6b'
+		enableBalancerUtils()
+	}
+	stage('Check Status') {
+	    snDevOpsStep 'e4407d439f723300a1af5bb0657fcf6b'
+	    snDevOpsChange()
+		checkStatus()
+	}
+}
