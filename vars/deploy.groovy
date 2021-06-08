@@ -8,8 +8,7 @@ def call(body) {
     echo "Deployed"
     currentBuild.result = 'SUCCESS' //FAILURE to fail*/
     stage('deploy') {
-      snDevOpsStep()
-      snDevOpsChange()
+      //snDevOpsChange()
         echo "inside deploy stage"
         sleep 5
     }
