@@ -9,7 +9,7 @@ def call(Closure body) {
   
 		def url = java.net.URLDecoder.decode(env.JOB_BASE_NAME,"UTF-8");
 		println("Uploading: ${url}")
- 		snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "zibbuild-web.jar", "version": "1.9","semanticVersion": "1.9.0","repositoryName": "services-1031"}]"}""")
+ 		snDevOpsArtifact(artifactsPayload: """{"artifacts": [{"name": "zibbuild-web.jar", "version": "1.9","semanticVersion": "1.9.0","repositoryName": "services-1031"}]}""")
  		echo ">>>>>>>Artifact Registered in Snow!"
 		
 }
