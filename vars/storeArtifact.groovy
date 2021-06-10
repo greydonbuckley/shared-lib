@@ -4,7 +4,7 @@ def call(Closure body) {
     def config = [:]
 //    body.resolveStrategy = Closure.DELEGATE_FIRST
 //    body.delegate = config
-	body()
+//	body()
 	println(config)
   
 		def url = java.net.URLDecoder.decode(env.JOB_BASE_NAME,"UTF-8");
